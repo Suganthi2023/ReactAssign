@@ -1,16 +1,13 @@
+import Book from './Book';
 
-function BookList(){
+function BookList({books}){
+    /*console.log(books);*/
     return (
-        <div>
-        <div>
-            <li>Pride and Prejudice</li>
-        </div>,
-        <div>
-           <li>Who moved my cheese?</li>
-        </div>,
-        <div>
-            <li>The One Minute Manager</li>
-        </div>
+        <div className="books">
+            
+            <ul>
+                {books.map((book)=> <Book book={book}/>)}
+            </ul>            
         </div>
     )
 }
