@@ -1,14 +1,14 @@
 
 
-function AddBook({inputtext,updateInputtext}){
+function AddBookForm({inputtext,updateInputtext,clickadd}){
     
     return (
         <div className="Addbook">
-             <h3>AddBook</h3> 
+             
              <input value={inputtext} onChange={updateInputtext}/>
-             <button>Add</button>             
+             <button onClick={clickadd}>Add Book</button>             
         </div>
     )
 }
 
-export default AddBook;
+export default AddBookForm;

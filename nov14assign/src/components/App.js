@@ -1,13 +1,13 @@
 import {useState} from "react";
 import BookList from "./BookList";
-import AddBook from "./AddBookForm";
+import AddBookForm from "./AddBookForm";
 
 
 function App() {
   const [myBooks, setMyBooks] = useState([    
     "Pride and Prejudice",          
     "Who moved my cheese?",       
-    "The One Minute Manager"      
+    "The One Minute Manager"   
   ]);  
   /*console.log(myBooks);*/
 
@@ -15,14 +15,26 @@ function App() {
 
   const updateBookForm = (e) => {
     e.preventDefault();
+    const textinput =e.target.value;
+    setY(textinput);
+  }
+
+  const addbook = (e) => {
+    e.preventDefault()
+    const updatedList = [...myBooks,y];
+    setMyBooks(updatedList);
+    setY('');
   }
 
   return (
     <div className="App">
       <h1>BookList App</h1>
+      <h2>Favourite Books</h2>
       <p>An Application for your Book Collection</p>
+      <AddBookForm inputtext={y} updateInputtext={updateBookForm}
+                    clickadd = {addbook}/>
       <BookList books={myBooks}/>
-      <AddBook inputtext={y} updateInputtext={updateBookForm}/>
+      
     </div>
   );
 }
