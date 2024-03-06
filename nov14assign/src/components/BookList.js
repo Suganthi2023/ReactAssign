@@ -1,11 +1,12 @@
 import Book from './Book';
 
-function BookList({books}){
+function BookList({books,clickex}){
     /*console.log(books);*/
     return (
         <div className="books">            
            
-            {books.map((book)=> <Book book={book}/>)}
+            {books.map((book)=> <Book book={book} clickx={clickex} />)}
+            
                         
         </div>
     )

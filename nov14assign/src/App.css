@@ -1,0 +1,34 @@
+.App{
+    background-color: rgb(168, 130, 202);
+    height: 100vh;
+}
+
+h1,h2,p {
+    text-align: center;
+}
+
+.input{
+    margin-left: 200px;  
+    height: 30px;
+    width: 500px;
+    position: relative;    
+   
+        
+}
+
+.addbutton{
+    height: 30px;
+    position: relative;
+}
+
+.book{
+    list-style-type: none;
+    text-align: center;
+    font-size: medium;
+}
+
+.removebutton{
+    color: darkred;
+    background-color: rgb(209, 129, 73);
+    margin-left: 50px;
+}

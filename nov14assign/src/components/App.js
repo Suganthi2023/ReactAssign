@@ -1,6 +1,8 @@
 import {useState} from "react";
 import BookList from "./BookList";
 import AddBookForm from "./AddBookForm";
+import "../App.css";
+
 
 
 function App() {
@@ -24,14 +26,21 @@ function App() {
     setY('');
   }
 
+  const removebook = (bookremove)=> {    
+    const newlist = myBooks.filter(book => book !==bookremove);
+    setMyBooks(newlist);
+  }
+
+ 
+
   return (
     <div className="App">
       <h1>BookList App</h1>
       <h2>Favourite Books</h2>
       <p>An Application for your Book Collection</p>
       <AddBookForm inputtext={y} updateInputtext={updateBookForm}
-                    clickadd = {addbook}/>
-      <BookList books={myBooks}/>
+                    clickadd = {addbook} />
+      <BookList books={myBooks} clickex={removebook}/>
       
     </div>
   );
