@@ -1,20 +1,28 @@
 import {useState} from "react";
 import BookList from "./BookList";
+import AddBook from "./AddBookForm";
 
 
 function App() {
-  const [books, setBooks] = useState([    
+  const [myBooks, setMyBooks] = useState([    
     "Pride and Prejudice",          
     "Who moved my cheese?",       
     "The One Minute Manager"      
   ]);  
-  /*console.log(books);*/
+  /*console.log(myBooks);*/
+
+  const[y,setY] = useState("");
+
+  const updateBookForm = (e) => {
+    e.preventDefault();
+  }
 
   return (
     <div className="App">
       <h1>BookList App</h1>
       <p>An Application for your Book Collection</p>
-      <BookList books={books}/>
+      <BookList books={myBooks}/>
+      <AddBook inputtext={y} updateInputtext={updateBookForm}/>
     </div>
   );
 }
