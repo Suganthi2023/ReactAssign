@@ -3,8 +3,9 @@ function Book({book}){
     console.log(book);
     return (
         <div className="book">
-            
-            {book}
+           <li>
+                {book}
+           </li>             
             
         </div>
     )

@@ -5,9 +5,7 @@ import AddBookForm from "./AddBookForm";
 
 function App() {
   const [myBooks, setMyBooks] = useState([    
-    "Pride and Prejudice",          
-    "Who moved my cheese?",       
-    "The One Minute Manager"   
+    
   ]);  
   /*console.log(myBooks);*/
 
