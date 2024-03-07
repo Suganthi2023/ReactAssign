@@ -1,11 +1,11 @@
 
-function Book({book,clickx}){
+function Book({book,title,clickx}){
     /*console.log(book);*/
     return (
         <div className="book">
            <li>
-                {book} 
-                <button className="removebutton" onClick={()=>clickx(book)}>X</button>        
+                {title} 
+                <button className="removebutton" onClick={(e)=>clickx(e,book.id)}>X</button>        
                 
            </li>             
             
